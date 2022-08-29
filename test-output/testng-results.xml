@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19601" started-at="2022-06-04T17:39:41 IST" finished-at="2022-06-04T17:40:00 IST">
+    <groups>
+      <group name="regression">
+        <method signature="TextBoxTest.formfil()[pri:1, instance:testingbabascripts.TextBoxTest@41e737]" name="formfil" class="testingbabascripts.TextBoxTest"/>
+        <method signature="TextBoxTest.inputoutputcheck()[pri:2, instance:testingbabascripts.TextBoxTest@41e737]" name="inputoutputcheck" class="testingbabascripts.TextBoxTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="TextBoxTest.clickonelements()[pri:0, instance:testingbabascripts.TextBoxTest@41e737]" name="clickonelements" class="testingbabascripts.TextBoxTest"/>
+        <method signature="TextBoxTest.formfil()[pri:1, instance:testingbabascripts.TextBoxTest@41e737]" name="formfil" class="testingbabascripts.TextBoxTest"/>
+      </group> <!-- smoke -->
+      <group name="sanity">
+        <method signature="TextBoxTest.formfil()[pri:1, instance:testingbabascripts.TextBoxTest@41e737]" name="formfil" class="testingbabascripts.TextBoxTest"/>
+        <method signature="TextBoxTest.inputoutputcheck()[pri:2, instance:testingbabascripts.TextBoxTest@41e737]" name="inputoutputcheck" class="testingbabascripts.TextBoxTest"/>
+      </group> <!-- sanity -->
+    </groups>
+    <test name="Default test" duration-ms="19601" started-at="2022-06-04T17:39:41 IST" finished-at="2022-06-04T17:40:00 IST">
+      <class name="testingbabascripts.TextBoxTest">
+        <test-method status="PASS" signature="geturllaunc()[pri:0, instance:testingbabascripts.TextBoxTest@41e737]" name="geturllaunc" is-config="true" duration-ms="14739" started-at="2022-06-04T17:39:41 IST" finished-at="2022-06-04T17:39:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- geturllaunc -->
+        <test-method status="PASS" signature="clickonelements()[pri:0, instance:testingbabascripts.TextBoxTest@41e737]" name="clickonelements" duration-ms="611" started-at="2022-06-04T17:39:56 IST" finished-at="2022-06-04T17:39:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickonelements -->
+        <test-method status="PASS" signature="formfil()[pri:1, instance:testingbabascripts.TextBoxTest@41e737]" name="formfil" duration-ms="2964" started-at="2022-06-04T17:39:56 IST" finished-at="2022-06-04T17:39:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- formfil -->
+        <test-method status="PASS" signature="inputoutputcheck()[pri:2, instance:testingbabascripts.TextBoxTest@41e737]" name="inputoutputcheck" duration-ms="259" started-at="2022-06-04T17:39:59 IST" finished-at="2022-06-04T17:39:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inputoutputcheck -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testingbabascripts.TextBoxTest@41e737]" name="teardown" is-config="true" duration-ms="953" started-at="2022-06-04T17:39:59 IST" finished-at="2022-06-04T17:40:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testingbabascripts.TextBoxTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
