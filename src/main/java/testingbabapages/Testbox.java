@@ -11,6 +11,7 @@ import org.testng.Assert;
 
 import actiondriver.Action;
 import base.BaseClass;
+import utility.Log;
 
 
 public class Testbox extends BaseClass{
@@ -30,7 +31,7 @@ public class Testbox extends BaseClass{
 	private WebElement currentadd;
 	@FindBy(xpath="//*[@id=\"paddresh1\"]")
 	private WebElement permanentadd;
-	@FindBy(xpath="//*[@onclick=\"return validateform()\"]")
+	@FindBy(xpath="//*[@value=\"Submit\"]")
 	private WebElement submit;
 	@FindBy (xpath="//*[@class=\"col-md-6 mt-5\"]/label")
 	private WebElement OutputElement;
@@ -41,6 +42,7 @@ public class Testbox extends BaseClass{
 		
 		
 		Action.click(driver, element);
+		Log.info("clicked on Element");
 		boolean result=Action.isDisplayed(driver, textbox);
 		Assert.assertEquals(result, true);		
 		
@@ -51,11 +53,17 @@ public class Testbox extends BaseClass{
 	{
 		
 		Action.click(driver, textbox);
+		Log.info("clicked on Text Box");
 		Action.type(fullname, dataprovider.ExcelUtility.getreaddata(2, 0,  1));
+		Log.info("Provide Full Name ");
 		Action.type(email, dataprovider.ExcelUtility.getreaddata(2, 1,  1));
+		Log.info("Provided Email ");
 		Action.type(currentadd, dataprovider.ExcelUtility.getreaddata(2, 2,  1));
+		Log.info("Provided CUrrent Address ");
 		Action.type(permanentadd, dataprovider.ExcelUtility.getreaddata(2, 3, 1));
+		Log.info("Provided Permanent Address ");
 		Action.click(driver, submit);
+		Log.info("Clicked on submit button");
 		
 		boolean result=Action.isDisplayed(driver, OutputElement);
 		Assert.assertEquals(result, true);	
@@ -76,7 +84,7 @@ public class Testbox extends BaseClass{
 		}
 		
 		for (int i=0;i<4;i++) {
-			Assert.assertEquals(Actual.get(i), dataprovider.ExcelUtility.getreaddata(2, i, path, 1));;
+			Assert.assertEquals(Actual.get(i), dataprovider.ExcelUtility.getreaddata(2, i,  1));;
 		}
 		
 		

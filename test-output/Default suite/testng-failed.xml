@@ -6,8 +6,10 @@
       <class name="testingbabascripts.TextBoxTest">
         <methods>
           <include name="teardown"/>
+          <include name="beforesuit"/>
           <include name="geturllaunc"/>
           <include name="inputoutputcheck"/>
+          <include name="formfil"/>
         </methods>
       </class> <!-- testingbabascripts.TextBoxTest -->
     </classes>

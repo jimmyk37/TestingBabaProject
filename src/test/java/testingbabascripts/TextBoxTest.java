@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import testingbabapages.Testbox;
+import utility.Log;
 
 public class TextBoxTest extends Testbox {
 	
@@ -14,7 +15,8 @@ public class TextBoxTest extends Testbox {
 	@BeforeTest
 	public void geturllaunc() 
 	{
-		getlaunchurl(dataprovider.Propertyutility.getreaddata("url"));
+		Log.starttest(getClass().getName());
+		getlaunchurl("https://www.testingbaba.com/newdemo.html");
 		ob = new Testbox();
 	}
 	
@@ -34,5 +36,7 @@ public class TextBoxTest extends Testbox {
     {
     	ob.inputoutputcheck();
     }
+	
+	
 
 }
