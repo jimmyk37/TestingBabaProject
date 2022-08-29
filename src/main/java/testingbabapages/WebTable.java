@@ -7,6 +7,7 @@ import org.testng.Assert;
 
 import actiondriver.Action;
 import base.BaseClass;
+import utility.Log;
 
 public class WebTable extends BaseClass{
 	public WebTable() {	PageFactory.initElements(driver, this);}
@@ -28,20 +29,45 @@ public class WebTable extends BaseClass{
 	public void clickonelements() 
 	{
 		Action.click(driver, element);
-		boolean result=Action.isDisplayed(driver, WebTable);
+		Log.info("Clicked on Element");
+		boolean result=Action.isDisplayed(driver, WebTable);		
 		Assert.assertEquals(result, true);
+		Log.info("WebTable Displayed");
 	}
 	
 	public void InsertDataInTable() 
 	{
 		Action.click(driver, WebTable);
+		Log.info("Clicked on Web Table");
 		Action.switchtoframe(frame);
+		Log.info("Switched to frame");
 		for(int i=0;i<10;i++) {
 		Action.type(Name, dataprovider.ExcelUtility.getreaddata(i, 0,  0));
+		Log.info("Entered Name"+dataprovider.ExcelUtility.getreaddata(i, 0,  0));
 		Action.type(Email, dataprovider.ExcelUtility.getreaddata(i, 1, 0));
+		Log.info("Entered Email"+dataprovider.ExcelUtility.getreaddata(i, 1,  0));
 		Action.click(driver, Save);
-		
+		Log.info("Data Saved");
 		
 		}
+		}
+		
+		public void checkinserteddata() 
+		{
+			Action.click(driver, WebTable);
+			Log.info("Clicked on Web Table");
+			Action.switchtoframe(frame);
+			Log.info("Switched to frame");
+			for(int i=0;i<10;i++) {
+			Action.type(Name, dataprovider.ExcelUtility.getreaddata(i, 0,  0));
+			Log.info("Entered Name"+dataprovider.ExcelUtility.getreaddata(i, 0,  0));
+			Action.type(Email, dataprovider.ExcelUtility.getreaddata(i, 1, 0));
+			Log.info("Entered Email"+dataprovider.ExcelUtility.getreaddata(i, 1,  0));
+			Action.click(driver, Save);
+			Log.info("Data Saved");
+			
+			
+			}
+	
 	}
 }
